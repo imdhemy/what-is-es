@@ -42,7 +42,7 @@ class EngineTest extends TestCase
         $body = ['sentence' => $this->faker->sentence];
 
         $this->document = new Document($this->index, $id, $body);
-        $this->engine = new Engine();
+        $this->engine = Engine::create();
         $this->engine->createIndex($this->index);
     }
 
@@ -101,5 +101,15 @@ class EngineTest extends TestCase
         sleep(1);
         $results = $this->engine->search($query);
         $this->assertEquals($this->document->getId(), $results->first()->getId());
+    }
+
+    /**
+     * @test
+     */
+    public function test_serialization()
+    {
+        $serializedDocument = serialize($this->document);
+        $unserlaizedDocument = unserialize($serializedDocument);
+        $this->assertEquals($this->document->getId(), $unserlaizedDocument->getId());
     }
 }

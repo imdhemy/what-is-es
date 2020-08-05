@@ -21,10 +21,19 @@ class Engine
 
     /**
      * Engine constructor.
+     * @param Client $client
      */
-    public function __construct()
+    public function __construct(Client $client)
     {
-        $this->client = ClientBuilder::create()->build();
+        $this->client = $client;
+    }
+
+    /**
+     * @return static
+     */
+    public static function create(): self
+    {
+        return new self(ClientBuilder::create()->build());
     }
 
     /**

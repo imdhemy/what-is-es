@@ -90,4 +90,27 @@ class Document
     {
         return sprintf("%s:%s", $this->index, $this->id);
     }
+
+
+    /**
+     * @return array
+     */
+    public function __serialize(): array
+    {
+        return [
+            'id' => $this->id,
+            'index' => $this->index,
+            'body' => $this->body
+        ];
+    }
+
+    /**
+     * @param array $data
+     */
+    public function __unserialize(array $data): void
+    {
+        $this->id = $data['id'];
+        $this->index = $data['index'];
+        $this->body = $data['body'];
+    }
 }
