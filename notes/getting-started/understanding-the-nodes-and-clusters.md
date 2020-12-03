@@ -11,7 +11,7 @@ The base of the cloud nature of ES is:
 - A node name is set by the configuration file, or is chosed from a list of built-in random names.
 - Internally, the ES engine initializes all the modules and plugins.
 
-**After the node startup**, the node searched for other cluster memebers and checks its index and shard status.
+**After the node startup**, the node searches for other cluster memebers and checks its index and shard status.
 
 **To Join two or more nodes in a cluster**, the following rules must be observed:
 - The version of ES must be the same.
