@@ -20,7 +20,7 @@ The base of the cloud nature of ES is:
 
 **A common approach** in cluster management is to have:
 - a **master node**, which is the main reference for all cluster-level actions,
-- and **secondary nodes**, the replicated the master data and its actions.
+- and **secondary nodes**, that replicate the master data and its actions.
 
 **To be consistent** in the **write** operations, all the update actions are first commited in the master node and
  then replicated in the secondary nodes.
