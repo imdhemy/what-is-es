@@ -12,4 +12,5 @@ Elastic search can be used both as a search engine as well as a data store. To e
  - field.
 At the end of this chapter, the protocols used to manage ElasticSearch are also discussed.
 
+# Contents:
 - [Understanding nodes and clusters](./understanding-the-nodes-and-clusters.md)
