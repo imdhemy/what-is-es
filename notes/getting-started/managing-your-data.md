@@ -24,4 +24,24 @@ Every record is stored in only a shard; the sharding algorithm is based on a rec
 | Field | Field | Field |
 | JSON Object | Record | BSON Object |
 
+## Operations in ES
+**In ES, the operations are divided into:**
+- **Cluster/Index operations**: 
+    * All clusters/indices with active write are locked;
+    * The read operations are broadcasted to all nodes.
 
+**When a record is saved in ES, the **destination shard** is chosen based on:
+- The ID of the record.
+- If the `routing` or `parent` parameters are defined, the correct shard is chosen by the **hash** of these parameters.
+
+- Index --- split into --> shards
+- Shard ---- contain up to --- 2^32 records
+    - ES performance scales horizontally with the number of shards.
+    - All native records operations(index, search, update, and delete ..) are managed in shards.
+    
+## Best practices
+- Not to have a shard too big in size (over 10 GB) to avoid poor **indexing performance**.
+- Not to over-allocate the number of shards to avoid poor **search performance**.
+
+<p dir="rtl">Next: <a href="./understanding-clusters-replication-and-sharding.md">Understanding clusters, replication
+, and sharding</a></p>
