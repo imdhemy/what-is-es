@@ -30,7 +30,7 @@ Every record is stored in only a shard; the sharding algorithm is based on a rec
     * All clusters/indices with active write are locked;
     * The read operations are broadcasted to all nodes.
 
-**When a record is saved in ES, the **destination shard** is chosen based on:
+**When a record is saved** in ES, the **destination shard** is chosen based on:
 - The ID of the record.
 - If the `routing` or `parent` parameters are defined, the correct shard is chosen by the **hash** of these parameters.
 
