@@ -14,5 +14,3 @@ When a node is running, a lot of services are managed by its instance. These ser
 - **Language scripting services**: They allow you to add a new language scripting support to ES.
 
 <p dir="rtl">Next: <a href="./managing-your-data.md">Managing your data</a></p>
-
- 
