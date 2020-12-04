@@ -37,3 +37,5 @@ The base of the cloud nature of ES is:
     * they contain the indices shards that store the indexed documents.
     
  **Using the standard configuration**, a node is both an arbiter and data container.
+ 
+<p dir="rtl">Next: <a href="./understanding-node-services.md">Understanding node services</a></p>
