@@ -14,3 +14,8 @@ At the end of this chapter, the protocols used to manage ElasticSearch are also 
 
 # Contents:
 - [Understanding nodes and clusters](./understanding-the-nodes-and-clusters.md)
+- [Understanding node services](./understanding-node-services.md)
+- [Managing your data](./managing-your-data.md)
+- [Understanding clusters, replications, and sharding](./understanding-clusters-replication-and-sharding.md)
+- [Communicating with ElasticSearch](./communicating-with-elasticsearch..md)
+
